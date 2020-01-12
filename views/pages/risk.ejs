@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script type="text/javascript">
+  setTimeout(function(){
+    location = ''
+  },6000)
+</script> 
+	<title>The Analysis Dashboard</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  
+    <header>
+    <% include ../partials/header %>
+    </header>
+
+    <div class="container-fluid">
+    <div class="row">
+    <header>
+    <% include ../partials/headerside %>
+    </header>
+  
+	 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+
+			<div class="row">
+        <div class="col-lg-4">
+          <div class="thumbnail" style="background-color:#ccffcc;height:400px; border-color:#c2c2a3; border-width: 10px;">
+            <h1 class="display-1 text-center" style="font-size: 40px; color: #e83410;">Risk with lowest RPZ:</h1>
+            <h1 class="display-1 text-center" style="font-size: 100px;"><%= riskDetailsToDisplay.lRPZt %></h1>
+            <h1 class="display-1 text-center" style="font-size: 50px;"> RPZ <%= riskDetailsToDisplay.lRPZ %></h1>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="thumbnail" style="background-color:#ccffcc;height:400px; border-color:#c2c2a3; border-width: 10px">
+            <h1 class="display-1 text-center" style="font-size: 40px;color: #e83410;">Risk with highest impact:</h1>
+            <h1 class="display-1 text-center" style="font-size: 100px;"><%= riskDetailsToDisplay.hImpactT %></h1>
+            <h1 class="display-1 text-center" style="font-size: 50px;"> Impact <%= riskDetailsToDisplay.hImpact %></h1>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="thumbnail" style="background-color:#ccffcc;height:400px; border-color:#c2c2a3; border-width: 10px">
+            <h1 class="display-1 text-center" style="font-size: 40px; color: #e83410;">Risk with highest RPZ:</h1>
+            <h1 class="display-1 text-center" style="font-size: 100px;"><%= riskDetailsToDisplay.hRPZt %></h1>
+            <h1 class="display-1 text-center" style="font-size: 50px;"> RPZ <%= riskDetailsToDisplay.hRPZ %></h1>
+          </divriskDetailsToDisplay        </div>
+
+			</div>
+		</main>
+    </div>
+  </div>
+    <footer>
+    <% include ../partials/footer %>
+    </footer>
+
+</body>
+</html>

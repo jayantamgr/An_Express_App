@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Risk Details Table</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+    <% include ../partials/header %>
+
+    <div class="container-fluid">
+    <div class="row">
+    <header>
+    <% include ../partials/headerside %>
+    </header>
+  
+	 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <p class="display-1 text-center text-muted" style="font-size: 50px; color: #313959; opacity: 0.7; line-height: 1; text-decoration: none; border-bottom: 1px solid black;">Moving Average Graph of the RPZ</p>
+
+        <!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+  animationEnabled: true,  
+  title:{
+    text: " "
+  },
+  axisY: {
+    title: "RPZ",
+    valueFormatString: "#0,,.",
+    suffix: "mn",
+    prefix: "$"
+  },
+  data: [{
+    type: "splineArea",
+    color: "rgba(54,158,173,.7)",
+    markerSize: 5,
+    xValueFormatString: ,
+    yValueFormatString: ,
+
+    dataPoints: [
+    RPZmoveAveLive.forEach(function(risksMA){ 
+      
+        { x: risksMA.RPZlist, y: risksMA.RPZlist },
+        { x: risksMA.RPZave, y: risksMA.RPZlist  }
+         
+        });
+   ]
+  }]
+  });
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
+        
+	 </main>
+ </div>
+</div>
+  <footer style=" margin-top: -50px;">
+    <% include ../partials/footer %>
+    </footer>
+  </header>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
